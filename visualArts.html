@@ -7,6 +7,9 @@
     <style>
         *{
             font-family: optima !important;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         .header{
             background: #FFF;
@@ -133,95 +136,77 @@
             font-weight: 600;
             text-align: center;
         }
-        .title-img{
-            width: 80%;
-            margin: 150px auto 0 auto;
-        }
-        .header-img{
-            width: 80%;
-            margin:0 auto;
-        }
-        /*@keyframes typing {*/
-        /*from {*/
-        /*width: 0;*/
-        /*}*/
-        /*}*/
-        /*h2,p{*/
-        /*width:100%;*/
-        /*overflow: hidden;*/
-        /*white-space: nowrap;*/
-        /*animation: typing 6s steps(1000);*/
-        /*}*/
-        /*.contentBox ul .sty-li .sty-li-div:hover, .contentBox ul .sty-li .sty-li-div2:hover{*/
-        /*color: #222027;*/
-        /*}*/
-        /*** effect rotate-scale ***/
 
-        /*.img-rotate-scale*/
-        /*{*/
-        /*transition:all 1.2s ease-in-out;*/
-        /*-webkit-transition:all 1.2s ease-in-out;*/
-        /*-moz-transition:all 1.2s ease-in-out;*/
-        /*-ms-transition:all 1.2s ease-in-out;*/
-        /*-o-transition:all 1.2s ease-in-out;*/
-        /*}*/
-
-        /*.img-rotate-scale:hover*/
-        /*{*/
-        /*transform:rotate(720deg) scale(2,2);*/
-        /*-webkit-transform:rotate(720deg) scale(2,2);*/
-        /*-moz-transform:rotate(720deg) scale(2,2);*/
-        /*-ms-transform:rotate(720deg) scale(2,2);*/
-        /*-o-transform:rotate(720deg) scale(2,2);*/
-        /*}*/
     </style>
+    <link rel="stylesheet"  href="header.css">
     <link rel="stylesheet" href="https://andstudio.lt/wp-content/themes/andstudio/css/foundation.min.css">
     <link rel="stylesheet" href="https://andstudio.lt/wp-content/themes/andstudio/css/style.css">
 </head>
 <div id="home">
-    <div class="header home-close close">
-        <div class="row row-full-padd">
-            <div class="small-3 columns nopad logo">
-                <a href="">
-                    <a href="">
+
+    <nav id="daohang">
+        <div class="nav-left">
+            <a href="">
                         <span style="color:#000;font-size: 27px;font-weight: 600;">
 Leah Liu</span>
-                    </a>
-                    <img class="logo-black show-for-small-only"
-                         src="https://andstudio.lt/wp-content/themes/andstudio/img/logo-black-brand.svg">
-                    <img class="logo-white show-for-medium"
-                         src="https://andstudio.lt/wp-content/themes/andstudio/img/logo-white.svg">
-                    <img class="logo-white show-for-small-only"
-                         src="https://andstudio.lt/wp-content/themes/andstudio/img/logo-white-brand.svg">
-                </a>
-            </div>
-            <div class="small-9 columns nopad text-right nav">
-                <div class="menu-main-menu-container">
-                    <ul id="menu-main-menu" class="nav-hold">
-                        <li id="menu-item-101"
-                            class="menu-item menu-item-type-post_type_archive menu-item-object-work menu-item-101"><a
-                                href="./index.html">HOME</a></li>
-                        <li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97">
-                            <a href="./about.html">ABOUT</a></li>
-                        <li id="menu-item-139"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a
-                                href="./contact.html">CONTACT</a></li>
-                        <li id="menu-item-1" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97">
-                            <a href="./inspiration.html">INSPIRATION</a></li>
-                        <li id="menu-item-2"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a
-                                href="./visualArts.html">VISUAL ARTS</a></li>
-                        <li id="menu-item-3"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a
-                                href="./mediaArts.html">MEDIA ARTS</a></li>
-                        <li id="menu-item-4"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-139"><a
-                                href="./comment.html">COMMENT</a></li>
-                    </ul>
-                </div>
-            </div>
+            </a>
         </div>
-    </div>
+        <div class="nav-right">
+            <ul>
+                <li class="submenu-general submenu-detail" id="shouye">
+                    <span class="sp"><a href="./index.html">HOME</a></span>
+                </li>
+                <li class="submenu-general submenu-detail">
+                    <span class="sp"><a href="./about.html">ABOUT</a></span>
+                </li>
+                <li class="submenu-general submenu-detail">
+                    <span class="sp"><a href="./contact.html">CONTACT</a></span>
+                </li>
+                <li class="submenu-general submenu-detail">
+                    <span class="sp">INSPIRATION</span>
+                    <ul class="submenu1">
+                        <li class="nav11">
+                            <span class="sp" onclick="toPath('OlafurELiasson')">Olafur ELiasson</span>
+                        </li>
+                        <li class="nav11">
+                            <span class="sp" onclick="toPath('PaulKlee')">Paul Klee</span>
+                        </li>
+                        <li class="nav11">
+                            <span class="sp" onclick="toPath('HenriMatisse')">Henri Matisse</span>
+                        </li>
+                        <li class="nav11">
+                            <span class="sp" onclick="toPath('AndyWarhol')">Andy Warhol</span>
+                        </li>
+                        <li class="nav11">
+                            <span class="sp" onclick="toPath('LukeEdwardHall')">Luke Edward Hall</span>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="submenu-general submenu-detail">
+                    <span>WORKS</span>
+                    <ul class="submenu1">
+                        <li class="nav11 w">
+                            <span class="sp">VISUAL ARTS</span>
+                            <ul class="submenu11 w2">
+                                <li><span class="sp" onclick="toVISUALARTS()">Self-portrait</span></li>
+                            </ul>
+                        </li>
+                        <li class="nav11 w">
+                            <span class="sp">MEDIA ARTS</span>
+                            <ul class="submenu11 w2">
+                                <li><span class="sp" onclick="toMEDIAARTS()">Homemade braised fish</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="submenu-general submenu-detail">
+                    <span class="sp"><a href="./comment.html">COMMENT</a></span>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
     <div class="contentBox">
         <div class="describe mar-t">
             <h2 class="title-s">Self-portrait</h2>
@@ -234,29 +219,29 @@ Leah Liu</span>
         <ul>
             <li class="sty-li" >
                 <div class="sty-li-div">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 15, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
                 <div class="sty-li-img">
                     <div class=" image-hover img-rotate-scale">
-                        <img src="./img-arts/L1010609.jpg" alt="">
+                        <img src="./img-arts/L1010609.JPG" alt="">
                     </div>
                 </div>
             </li>
             <li class="sty-li" >
                 <div class="sty-li-img2">
                     <div class=" image-hover img-rotate-scale">
-                        <img src="./img-arts/L1010611.jpg" alt="">
+                        <img src="./img-arts/L1010611.JPG" alt="">
                     </div>
                 </div>
                 <div class="sty-li-div2">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 15, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
             </li>
             <li class="sty-li" >
                 <div class="sty-li-div">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 15, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
                 <div class="sty-li-img">
@@ -268,22 +253,22 @@ Leah Liu</span>
             <li class="sty-li" >
                 <div class="sty-li-img2">
                     <div class=" image-hover img-rotate-scale">
-                        <img src="./img-arts/L1010733.jpg" alt="">
+                        <img src="./img-arts/L1010733.JPG" alt="">
                     </div>
                 </div>
                 <div class="sty-li-div2">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 22, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
             </li>
             <li class="sty-li" >
                 <div class="sty-li-div">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 22, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
                 <div class="sty-li-img">
                     <div class=" image-hover img-rotate-scale">
-                        <img src="./img-arts/L1010739.jpg" alt="">
+                        <img src="./img-arts/L1010739.JPG" alt="">
                     </div>
                 </div>
             </li>
@@ -294,13 +279,13 @@ Leah Liu</span>
                     </div>
                 </div>
                 <div class="sty-li-div2">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 22, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
             </li>
             <li class="sty-li" >
                 <div class="sty-li-div">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 22, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
                 <div class="sty-li-img">
@@ -316,13 +301,13 @@ Leah Liu</span>
                     </div>
                 </div>
                 <div class="sty-li-div2">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 22, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
             </li>
             <li class="sty-li" >
                 <div class="sty-li-div">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 22, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
                 <div class="sty-li-img">
@@ -338,13 +323,13 @@ Leah Liu</span>
                     </div>
                 </div>
                 <div class="sty-li-div2">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 22, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
             </li>
             <li class="sty-li" >
                 <div class="sty-li-div">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 22, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
                 <div class="sty-li-img">
@@ -360,13 +345,13 @@ Leah Liu</span>
                     </div>
                 </div>
                 <div class="sty-li-div2">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 22, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
             </li>
             <li class="sty-li" >
                 <div class="sty-li-div">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 22, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
                 <div class="sty-li-img">
@@ -382,13 +367,13 @@ Leah Liu</span>
                     </div>
                 </div>
                 <div class="sty-li-div2">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 22, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
             </li>
             <li class="sty-li" >
                 <div class="sty-li-div">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 27, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
                 <div class="sty-li-img">
@@ -404,13 +389,13 @@ Leah Liu</span>
                     </div>
                 </div>
                 <div class="sty-li-div2">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 27, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
             </li>
             <li class="sty-li" >
                 <div class="sty-li-div">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 27, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
                 <div class="sty-li-img">
@@ -426,13 +411,13 @@ Leah Liu</span>
                     </div>
                 </div>
                 <div class="sty-li-div2">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 27, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
             </li>
             <li class="sty-li" >
                 <div class="sty-li-div">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 27, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
                 <div class="sty-li-img">
@@ -448,13 +433,13 @@ Leah Liu</span>
                     </div>
                 </div>
                 <div class="sty-li-div2">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 27, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
             </li>
             <li class="sty-li" >
                 <div class="sty-li-div">
-                    <p>Feb 22, 2020  updates</p>
+                    <p>May 27, 2020  updates</p>
                     <h2>Self-portrait</h2>
                 </div>
                 <div class="sty-li-img">
@@ -498,5 +483,110 @@ Leah Liu</span>
 <script src="https://andstudio.lt/wp-content/themes/andstudio/js/mdSkew.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="https://andstudio.lt/wp-content/themes/andstudio/js/main.js"></script>
+<script type="text/javascript">
 
+    var url = window.location.href;
+    var index = url.lastIndexOf("=");
+    var obj = url.substring(index+1,url.length);
+    // alert(obj);
+    if(obj === 'OlafurELiasson'){
+        var rootB = document.getElementsByClassName('b');
+        for (var i = 0;i<rootB.length;i++){
+            rootB[i].style.display = "none";
+        }
+        var rootC = document.getElementsByClassName('c');
+        for (var j = 0;j<rootC.length;j++){
+            rootC[j].style.display = "none";
+        }
+        var rootD = document.getElementsByClassName('d');
+        for (var k = 0;k<rootD.length;k++){
+            rootD[k].style.display = "none";
+        }
+        var rootE = document.getElementsByClassName('e');
+        for (var h = 0;h<rootE.length;h++){
+            rootE[h].style.display = "none";
+        }
+    }
+    if(obj === 'PaulKlee'){
+        var rootB = document.getElementsByClassName('a');
+        for (var i = 0;i<rootB.length;i++){
+            rootB[i].style.display = "none";
+        }
+        var rootC = document.getElementsByClassName('c');
+        for (var j = 0;j<rootC.length;j++){
+            rootC[j].style.display = "none";
+        }
+        var rootD = document.getElementsByClassName('d');
+        for (var k = 0;k<rootD.length;k++){
+            rootD[k].style.display = "none";
+        }
+        var rootE = document.getElementsByClassName('e');
+        for (var h = 0;h<rootE.length;h++){
+            rootE[h].style.display = "none";
+        }
+    }
+    if(obj === 'HenriMatisse'){
+        var rootB = document.getElementsByClassName('a');
+        for (var i = 0;i<rootB.length;i++){
+            rootB[i].style.display = "none";
+        }
+        var rootC = document.getElementsByClassName('b');
+        for (var j = 0;j<rootC.length;j++){
+            rootC[j].style.display = "none";
+        }
+        var rootD = document.getElementsByClassName('d');
+        for (var k = 0;k<rootD.length;k++){
+            rootD[k].style.display = "none";
+        }
+        var rootE = document.getElementsByClassName('e');
+        for (var h = 0;h<rootE.length;h++){
+            rootE[h].style.display = "none";
+        }
+    }
+    if(obj === 'AndyWarhol'){
+        var rootB = document.getElementsByClassName('a');
+        for (var i = 0;i<rootB.length;i++){
+            rootB[i].style.display = "none";
+        }
+        var rootC = document.getElementsByClassName('b');
+        for (var j = 0;j<rootC.length;j++){
+            rootC[j].style.display = "none";
+        }
+        var rootD = document.getElementsByClassName('c');
+        for (var k = 0;k<rootD.length;k++){
+            rootD[k].style.display = "none";
+        }
+        var rootE = document.getElementsByClassName('e');
+        for (var h = 0;h<rootE.length;h++){
+            rootE[h].style.display = "none";
+        }
+    }
+    if(obj === 'LukeEdwardHall'){
+        var rootB = document.getElementsByClassName('a');
+        for (var i = 0;i<rootB.length;i++){
+            rootB[i].style.display = "none";
+        }
+        var rootC = document.getElementsByClassName('b');
+        for (var j = 0;j<rootC.length;j++){
+            rootC[j].style.display = "none";
+        }
+        var rootD = document.getElementsByClassName('c');
+        for (var k = 0;k<rootD.length;k++){
+            rootD[k].style.display = "none";
+        }
+        var rootE = document.getElementsByClassName('d');
+        for (var h = 0;h<rootE.length;h++){
+            rootE[h].style.display = "none";
+        }
+    }
+    function toPath(item){
+        window.location.href='./inspiration.html' + '?code=' + item;
+    }
+    function toVISUALARTS() {
+        window.location.href='./visualArts.html';
+    }
+    function toMEDIAARTS() {
+        window.location.href='./mediaArts.html';
+    }
+</script>
 

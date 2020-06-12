@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{margin:0;padding: 0;}
+        #daohang .nav-left{
+            float: left;
+            line-height: 66px;
+            margin-left: 10%;
+        }
+        #daohang .nav-right{
+            float: right;
+            margin-right: 10%;
+        }
+        #daohang{background:#FFF;height: 66px;}
+        #daohang a{text-decoration: none;color: #000;}
+        /*#daohang ul{height: 100%;}*/
+        li{list-style-type: none;}
+        .submenu-general{
+            width: 120px;
+           height: 100%;
+            line-height: 66px; /*垂直居中*/
+            text-align:center;
+            /*display: inline-block; */
+            float: left;
+            /*padding: 0 10px;*/
+            /* 使用inline-block会造成空隙*/
+        }
+        span{display: inline-block;}
+        .submenu-detail>span{width: 100px;}
+        .nav11>span,.submenu11 span{width: 210px;}
+        .nav11{position: relative;}
+        .nav11>span{background:#eee; }
+        .submenu11{position: absolute;left:210px;top: 0;}
+        .submenu11 span{background:#ddd;}
+        .submenu11,.nav11>span{display: none;}
+        .submenu-detail:hover{background:#eee; }
+        .submenu-detail:hover .nav11>span{display: block;}
+        /*a:hover b前提是a是b的父级元素*/
+        .nav11>span:hover{background:#ddd; }
+        .nav11:hover .submenu11{display: block;}
+        .submenu11 span:hover{background:#ccc; }
+        .submenu1 span{text-align: left;text-indent: 20px;}
+    </style>
+</head>
+<body>
+<nav id="daohang">
+    <div class="nav-left">
+        <a href="">
+                        <span style="color:#000;font-size: 27px;font-weight: 600;">
+Leah Liu</span>
+        </a>
+    </div>
+    <div class="nav-right">
+        <ul>
+            <li class="submenu-general submenu-detail" id="shouye">
+                <span><a href="./index.html">HOME</a></span>
+            </li>
+            <li class="submenu-general submenu-detail">
+                <span><a href="./about.html">ABOUT</a></span>
+            </li>
+            <li class="submenu-general submenu-detail">
+                <span><a href="./contact.html">CONTACT</a></span>
+            </li>
+            <li class="submenu-general submenu-detail">
+                <span>INSPIRATION</span>
+                <ul class="submenu1">
+                    <li class="nav11">
+                        <span><a href="./inspiration.html">Olafur ELiasson</a></span>
+                    </li>
+                    <li class="nav11">
+                        <span><a href="./inspiration.html">Paul Klee</a></span>
+                    </li>
+                    <li class="nav11">
+                        <span><a href="./inspiration.html">Henri Matisse</a></span>
+                    </li>
+                    <li class="nav11">
+                        <span><a href="./inspiration.html">Andy Warhol</a></span>
+                    </li>
+                    <li class="nav11">
+                        <span> <a href="./inspiration.html">Luke Edward Hall</a></span>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="submenu-general submenu-detail">
+                <span>WORKS</span>
+                <ul class="submenu1">
+                    <li class="nav11">
+                        <span>VISUAL ARTS</span>
+                        <ul class="submenu11">
+                            <li><span><a href="./contact.html">Self-portrait</a></span></li>
+                        </ul>
+                    </li>
+                    <li class="nav11">
+                        <span>MEDIA ARTS</span>
+                        <ul class="submenu11">
+                            <li><span><a href="./contact.html">Homemade braised fish</a></span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="submenu-general submenu-detail">
+                <span><a href="./comment.html">COMMENT</a></span>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+</body>
+</html>

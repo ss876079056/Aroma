@@ -1,10 +1,442 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>comment</title>
+    <style>
+        *{
+            font-family: optima !important;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .contentBox{
+           display: flex;
+            vertical-align: top;
+        }
+        .contentBox-left, .contentBox-right{
+            display: inline-block;
+        }
+        .contentBox-left{
+            width: 50%;
+            margin-left: 10%;
+        }
+        .contentBox-right{
+            width: 25%;
+            margin-left: 5%;
+        }
+        .contentBox-right .contentBox-right-title{
+           font-size: 30px;
+           margin-bottom: 100px;
+        }
+        .h-title{
+        font-size: 40px;
+        font-weight: 600;
+        /*text-align: center;*/
+        margin-left: 10%;
+        margin-top: 120px;
+            margin-bottom: 50px;
+        }
+        .contentBox ul{
+            list-style-type:none;
+            margin-left: 10%;
+            height:calc(100vh - 300px) ;
+            overflow-y: scroll;
+            scrollbar-width: none; /* firefox */
+            -ms-overflow-style: none; /* IE 10+ */
+            overflow-x: hidden;
+        }
+        .contentBox ul li{
+            border-bottom: #eee solid 1px;
+            padding: 20px 0;
+        }
+        .contentBox ul li .userInfo{
+            display: flex;
+            align-items: center;
+            color: coral;
+        }
+        .contentBox ul li .userInfo img{
+            width: 50px;
+            height:50px;
+            margin-right: 20px;
+        }
+        .contentBox ul p{
+            color: #777;
+            display: inline-block;
+            margin-left: 70px;
+        }
+        .msg-content{
+            font-size:20px;
+            margin-bottom: 10px;
+            margin-left: 70px;
+            width: 90%;
+            height: auto;
+            word-wrap:break-word;
+            word-break:break-all;
+            overflow: hidden;
+        }
+.form .item{
+    margin: 30px 0;
+}
+        #userName{
+            width: 80%;
+            height:50px;
+
+        }
+       .form input,.form textarea{
+           border-radius: 5px;
+           background:none;
+           outline:none;
+           border:1px solid #ccc;
+           font-size: 18px;
+           padding-left: 10px;
+        }
+        #content{
+            width: 80%;
+            height: 200px;
+        }
+
+        .btn{
+            width: 200px;
+            height: 45px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: solid 1px #ccc;
+            background-color: #ddd;
+            outline: none;
+            cursor: pointer;
+            float: right;
+            margin-right:45%;
+            margin-top: 30px;
+        }
+        .btn:hover{
+            background-color: #eee;
+        }
+        .submenu1,.submenu11{
+            padding: 0 !important;
+
+        }
+       ::-webkit-scrollbar {
+            display: none;
+           /*width: 0;*/
+           /*height: 0;*/
+        }
+
+    </style>
+    <link rel="stylesheet"  href="header.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
+<nav id="daohang">
+    <div class="nav-left">
+        <a href="">
+                        <span style="color:#000;font-size: 27px;font-weight: 600;">
+Leah Liu</span>
+        </a>
+    </div>
+    <div class="nav-right">
+        <ul>
+            <li class="submenu-general submenu-detail" id="shouye">
+                <span class="sp"><a href="./index.html">HOME</a></span>
+            </li>
+            <li class="submenu-general submenu-detail">
+                <span class="sp"><a href="./about.html">ABOUT</a></span>
+            </li>
+            <li class="submenu-general submenu-detail">
+                <span class="sp"><a href="./contact.html">CONTACT</a></span>
+            </li>
+            <li class="submenu-general submenu-detail">
+                <span class="sp">INSPIRATION</span>
+                <ul class="submenu1">
+                    <li class="nav11">
+                        <span class="sp" onclick="toPath('OlafurELiasson')">Olafur ELiasson</span>
+                    </li>
+                    <li class="nav11">
+                        <span class="sp" onclick="toPath('PaulKlee')">Paul Klee</span>
+                    </li>
+                    <li class="nav11">
+                        <span class="sp" onclick="toPath('HenriMatisse')">Henri Matisse</span>
+                    </li>
+                    <li class="nav11">
+                        <span class="sp" onclick="toPath('AndyWarhol')">Andy Warhol</span>
+                    </li>
+                    <li class="nav11">
+                        <span class="sp" onclick="toPath('LukeEdwardHall')">Luke Edward Hall</span>
+                    </li>
 
+                </ul>
+            </li>
+            <li class="submenu-general submenu-detail">
+                <span>WORKS</span>
+                <ul class="submenu1">
+                    <li class="nav11 w">
+                        <span class="sp">VISUAL ARTS</span>
+                        <ul class="submenu11 w2">
+                            <li><span class="sp" onclick="toVISUALARTS()">Self-portrait</span></li>
+                        </ul>
+                    </li>
+                    <li class="nav11 w">
+                        <span class="sp">MEDIA ARTS</span>
+                        <ul class="submenu11 w2">
+                            <li><span class="sp" onclick="toMEDIAARTS()">Homemade braised fish</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="submenu-general submenu-detail">
+                <span class="sp"><a href="./comment.html">COMMENT</a></span>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+<p class="h-title">message board</p>
+<div class="contentBox">
+<div class="contentBox-left">
+    <ul id="msgList">
+        <!--<li class="messageInfo">-->
+            <!--<div class="userInfo">-->
+                <!--<img src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" alt="">-->
+                <!--<span>string</span>-->
+            <!--</div>-->
+            <!--<div class="msg-content">string</div>-->
+            <!--<p>2020-06-12 00:16:29</p>-->
+        <!--</li>-->
+    </ul>
+</div>
+    <div class="contentBox-right">
+        <div class="form">
+            <p class="contentBox-right-title">Let me say something</p>
+            <div class="item">
+                <input id="userName" type="text" placeholder="Please leave your name"/>
+            </div>
+            <div class="item message">
+                <textarea id="content" cols="30" rows="10"  placeholder="What do you think of this website?"></textarea>
+            </div>
+            <button type="submit" class="btn" onclick="submit()">Submit</button>
+        </div>
+    </div>
+</div>
 </body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript">
+    var url = window.location.href;
+    var index = url.lastIndexOf("=");
+    var obj = url.substring(index+1,url.length);
+    // alert(obj);
+    if(obj === 'OlafurELiasson'){
+        var rootB = document.getElementsByClassName('b');
+        for (var i = 0;i<rootB.length;i++){
+            rootB[i].style.display = "none";
+        }
+        var rootC = document.getElementsByClassName('c');
+        for (var j = 0;j<rootC.length;j++){
+            rootC[j].style.display = "none";
+        }
+        var rootD = document.getElementsByClassName('d');
+        for (var k = 0;k<rootD.length;k++){
+            rootD[k].style.display = "none";
+        }
+        var rootE = document.getElementsByClassName('e');
+        for (var h = 0;h<rootE.length;h++){
+            rootE[h].style.display = "none";
+        }
+    }
+    if(obj === 'PaulKlee'){
+        var rootB = document.getElementsByClassName('a');
+        for (var i = 0;i<rootB.length;i++){
+            rootB[i].style.display = "none";
+        }
+        var rootC = document.getElementsByClassName('c');
+        for (var j = 0;j<rootC.length;j++){
+            rootC[j].style.display = "none";
+        }
+        var rootD = document.getElementsByClassName('d');
+        for (var k = 0;k<rootD.length;k++){
+            rootD[k].style.display = "none";
+        }
+        var rootE = document.getElementsByClassName('e');
+        for (var h = 0;h<rootE.length;h++){
+            rootE[h].style.display = "none";
+        }
+    }
+    if(obj === 'HenriMatisse'){
+        var rootB = document.getElementsByClassName('a');
+        for (var i = 0;i<rootB.length;i++){
+            rootB[i].style.display = "none";
+        }
+        var rootC = document.getElementsByClassName('b');
+        for (var j = 0;j<rootC.length;j++){
+            rootC[j].style.display = "none";
+        }
+        var rootD = document.getElementsByClassName('d');
+        for (var k = 0;k<rootD.length;k++){
+            rootD[k].style.display = "none";
+        }
+        var rootE = document.getElementsByClassName('e');
+        for (var h = 0;h<rootE.length;h++){
+            rootE[h].style.display = "none";
+        }
+    }
+    if(obj === 'AndyWarhol'){
+        var rootB = document.getElementsByClassName('a');
+        for (var i = 0;i<rootB.length;i++){
+            rootB[i].style.display = "none";
+        }
+        var rootC = document.getElementsByClassName('b');
+        for (var j = 0;j<rootC.length;j++){
+            rootC[j].style.display = "none";
+        }
+        var rootD = document.getElementsByClassName('c');
+        for (var k = 0;k<rootD.length;k++){
+            rootD[k].style.display = "none";
+        }
+        var rootE = document.getElementsByClassName('e');
+        for (var h = 0;h<rootE.length;h++){
+            rootE[h].style.display = "none";
+        }
+    }
+    if(obj === 'LukeEdwardHall'){
+        var rootB = document.getElementsByClassName('a');
+        for (var i = 0;i<rootB.length;i++){
+            rootB[i].style.display = "none";
+        }
+        var rootC = document.getElementsByClassName('b');
+        for (var j = 0;j<rootC.length;j++){
+            rootC[j].style.display = "none";
+        }
+        var rootD = document.getElementsByClassName('c');
+        for (var k = 0;k<rootD.length;k++){
+            rootD[k].style.display = "none";
+        }
+        var rootE = document.getElementsByClassName('d');
+        for (var h = 0;h<rootE.length;h++){
+            rootE[h].style.display = "none";
+        }
+    }
+    function toPath(item){
+        window.location.href='./inspiration.html' + '?code=' + item;
+    }
+    function toVISUALARTS() {
+        window.location.href='./visualArts.html';
+    }
+    function toMEDIAARTS() {
+        window.location.href='./mediaArts.html';
+    }
+    /**
+     *获取当前时间
+     *format=1精确到天
+     *format=2精确到分
+     */
+    var time;
+    var name = '';
+    var content = '';
+    // var messageList = [];
+    function getCurrentDate(format) {
+        var now = new Date();
+        var year = now.getFullYear(); //得到年份
+        var month = now.getMonth();//得到月份
+        var date = now.getDate();//得到日期
+        var day = now.getDay();//得到周几
+        var hour = now.getHours();//得到小时
+        var minu = now.getMinutes();//得到分钟
+        var sec = now.getSeconds();//得到秒
+        month = month + 1;
+        if (month < 10) month = "0" + month;
+        if (date < 10) date = "0" + date;
+        if (hour < 10) hour = "0" + hour;
+        if (minu < 10) minu = "0" + minu;
+        if (sec < 10) sec = "0" + sec;
+        var time = "";
+        time = year + "-" + month + "-" + date+ " " + hour + ":" + minu + ":" + sec;
+        this.time = time;
+        setTimeout(()=>{
+            this.getCurrentDate()
+        },1000);
+    }
+    this.getCurrentDate();
+  //发送留言
+    function submit(){
+        this.name = $('#userName').val();
+        this.content =  $('#content').val();
+        this.postMessage();
+    }
+    function postMessage(){
+        var _this = this;
+        $.ajax({
+            type:"POST",
+            url: "http://101.201.141.88:8801/api/Message/SaveMessage",
+            data: {
+                id: "",
+                name: this.name,
+                time: this.time,
+                text: this.content
+            },
+            async:true,
+            dataType: "json",
+            success:function (res) {
+                $('#userName').val('');
+                $('#content').val('');
+                _this.getMessage();
+                alert('Message successfully!');
+            },
+            error:function (err) {
+                console.log(err);
+            }
+        });
+    }
+    //获取留言
+  function getMessage() {
+        var _this = this;
+      $.ajax({
+          type:"POST",
+          url: "http://101.201.141.88:8801/api/Message/GetMessageList",
+          data: {},
+          async:true,
+          dataType: "json",
+          success:function (res) {
+              var str="";
+              for(var i=0;i< res.Result.length;i++)
+              {
+                  var msg = res.Result[i];
+                  //格式化日期
+                  $(function () {
+                      var time = msg.Time;
+                      var data = new Date(time);
+                      var year = data.getFullYear();  //获取年
+                      var month = data.getMonth() + 1;    //获取月
+                      var day = data.getDate(); //获取日
+                      var hours = data.getHours();
+                      var minutes = data.getMinutes();
+                      var second = data.getSeconds();
+                      if (month < 10) month = "0" + month;
+                      if (day < 10) day = "0" + day;
+                      if (hours < 10) hours = "0" + hours;
+                      if (minutes < 10) minutes = "0" + minutes;
+                      if (second < 10) second = "0" + second;
+                      msg.Time = year + "-" + month + "-" + day  + " " + hours + ":" + minutes +':'+second;
+                  });
+                  var imgUrl = ['https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png ','https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3034603543,2101986061&fm=26&gp=0.jpg'];
+                  var url = imgUrl[Math.floor(Math.random()*imgUrl.length)];
+                  str+='<li class="messageInfo">' + '<div class="userInfo">' + '<img src= ' + url + 'alt=""/>' + '<span>'+ msg.Name + '</div>' +'<div class="msg-content">' +  msg.Text + '</div>' + '<p>' + msg.Time + '</p>' +'</li>'
+              }
+              $('#msgList').html(str);
+
+              // $("#msgList messageInfo").on("click","li",function(){
+              //     alert($(this).text());
+              // });
+
+              // alert(res.Result);
+          },
+          error:function (err) {
+              console.log(err);
+          }
+      });
+  }
+   this.getMessage();
+
+</script>
 </html>
