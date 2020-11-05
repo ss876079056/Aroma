@@ -1,0 +1,237 @@
+/*头部导航栏 —— 三级菜单*/
+#daohang .nav-left {
+  float: left;
+  line-height: 66px;
+  margin-left: 8%;
+}
+
+#daohang .nav-right {
+  float: right;
+  margin-right: 8%;
+}
+
+#daohang ul {
+  margin: 0;
+}
+
+#daohang {
+  background: #FFF;
+  height: 66px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  font-size: 18px;
+}
+
+#daohang a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*#daohang ul{height: 100%;}*/
+.nav-right li {
+  list-style-type: none;
+}
+
+.submenu-general {
+  width: 120px;
+  height: 100%;
+  line-height: 66px;
+  /*垂直居中*/
+  text-align: center;
+  float: left;
+  margin: 0 10px;
+  /* 使用inline-block会造成空隙*/
+}
+
+.w>span {
+  width: 180px !important;
+}
+
+.w2 span {
+  width: 230px !important;
+}
+
+.w2 {
+  position: absolute;
+  left: 180px !important;
+  top: 0;
+}
+
+.sp {
+  display: inline-block;
+}
+
+.submenu-detail>span {
+  width: 100px;
+}
+
+.nav11>span,
+.submenu11 span {
+  width: 210px;
+}
+
+.nav11 {
+  position: relative;
+}
+
+.nav11>span {
+  background: #eee;
+}
+
+.submenu11 {
+  position: absolute;
+  left: 210px;
+  top: 0;
+}
+
+.submenu11 span {
+  background: #ddd;
+}
+
+.submenu11,
+.nav11>span {
+  display: none;
+}
+
+.submenu-detail:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.submenu-detail:hover .nav11>span {
+  display: block;
+  cursor: pointer;
+}
+
+/*a:hover b前提是a是b的父级元素*/
+.nav11>span:hover {
+  background: #ddd;
+}
+
+.nav11:hover .submenu11 {
+  display: block;
+}
+
+.submenu11 span:hover {
+  background: #ccc;
+}
+
+.submenu1 span {
+  text-align: left;
+  text-indent: 20px;
+}
+
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99900;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.preloader:before,
+.preloader:after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: #000;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.preloader:after {
+  left: auto;
+  right: 0;
+}
+
+.preloader:before {
+  right: auto;
+  left: 0;
+}
+
+.preloader {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: fade-in;
+  transition-timing-function: ease;
+}
+
+
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  /*初始状态 透明度为0*/
+  10% {
+    opacity: 0.7;
+    -webkit-transform: translate(-5%, -5%);
+    transform: translate(-5%, -5%);
+  }
+  /*初始状态 透明度为0*/
+  20% {
+    opacity: 0.6;
+    -webkit-transform: translate(-15%, -15%);
+    transform: translate(-20%, -20%);
+  }
+  /*初始状态 透明度为0*/
+  30% {
+    opacity: 0.4;
+    -webkit-transform: translate(-20%, -20%);
+    transform: translate(-20%, -20%);
+  }
+  /*初始状态 透明度为0*/
+  40% {
+    opacity: 0.4;
+    -webkit-transform: translate(-25%, -25%);
+    transform: translate(-25%, -25%);
+  }
+
+  /*初始状态 透明度为0*/
+  50% {
+    opacity: 0.4;
+    -webkit-transform: translate(-35%, -35%);
+    transform: translate(-35%, -35%);
+  }
+
+  /*过渡状态 透明度为0*/
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  /*结束状态 透明度为1*/
+}
+
+@-webkit-keyframes fade-in {
+
+  /*针对webkit内核*/
+  0% {
+    opacity: 1;
+  }
+
+  /*初始状态 透明度为0*/
+  40% {
+    opacity: 0.4;
+  }
+
+  /*过渡状态 透明度为0*/
+  100% {
+    opacity: 0;
+  }
+
+  /*结束状态 透明度为1*/
+}

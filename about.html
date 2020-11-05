@@ -34,7 +34,7 @@
         }
 
     </style>
-    <link rel="stylesheet"  href="header.css">
+    <link href="css/header.css" rel="stylesheet" type="text/css">
     <meta property="og:image" content="https://andstudio.lt/wp-content/themes/andstudio/img/img-fb-share.png">
 
     <!--<link rel="apple-touch-icon" sizes="180x180"-->
@@ -155,70 +155,38 @@
 </head>
 <body data-rsssl="1" class="page-template page-template-about page-template-about-php page page-id-8"
       data-whatinput="mouse">
-
-<nav id="daohang">
-    <div class="nav-left">
-        <a href="">
-                        <span style="color:#000;font-size: 27px;font-weight: 600;">
-Leah Liu</span>
-        </a>
-    </div>
-    <div class="nav-right">
-        <ul>
-            <li class="submenu-general submenu-detail" id="shouye">
-                <span class="sp"><a href="./index.html">HOME</a></span>
+    
+      <nav id="daohang">
+        <div class="nav-left">
+          <a href="./index.html">
+            <span style="color:#000;font-size: 27px;font-weight: 600;">
+              Leah Liu</span>
+          </a>
+        </div>
+        <div class="nav-right">
+          <ul>
+            <li class="submenu-general submenu-detail">
+              <span class="sp">WORKS</span>
+              <ul class="submenu1">
+                <li class="nav11 w">
+                  <span class="sp" onclick="toPath('2020')">2020</span>
+                </li>
+                <li class="nav11 w">
+                  <span class="sp" onclick="toPath('2019')">2019</span>
+                </li>
+              </ul>
             </li>
             <li class="submenu-general submenu-detail">
-                <span class="sp"><a href="./about.html">ABOUT</a></span>
+              <span class="sp"><a href="./about.html">ABOUT</a></span>
             </li>
             <li class="submenu-general submenu-detail">
-                <span class="sp"><a href="./contact.html">CONTACT</a></span>
+              <span class="sp"><a href="./contact.html">CONTACT</a></span>
             </li>
-            <li class="submenu-general submenu-detail">
-                <span class="sp">INSPIRATION</span>
-                <ul class="submenu1">
-                    <li class="nav11">
-                        <span class="sp" onclick="toPath('OlafurELiasson')">Olafur ELiasson</span>
-                    </li>
-                    <li class="nav11">
-                        <span class="sp" onclick="toPath('PaulKlee')">Paul Klee</span>
-                    </li>
-                    <li class="nav11">
-                        <span class="sp" onclick="toPath('HenriMatisse')">Henri Matisse</span>
-                    </li>
-                    <li class="nav11">
-                        <span class="sp" onclick="toPath('AndyWarhol')">Andy Warhol</span>
-                    </li>
-                    <li class="nav11">
-                        <span class="sp" onclick="toPath('LukeEdwardHall')">Luke Edward Hall</span>
-                    </li>
-
-                </ul>
-            </li>
-            <li class="submenu-general submenu-detail">
-                <span>WORKS</span>
-                <ul class="submenu1">
-                    <li class="nav11 w">
-                        <span class="sp">VISUAL ARTS</span>
-                        <ul class="submenu11 w2">
-                            <li><span class="sp" onclick="toVISUALARTS()">Self-portrait</span></li>
-                        </ul>
-                    </li>
-                    <li class="nav11 w">
-                        <span class="sp">MEDIA ARTS</span>
-                        <ul class="submenu11 w2">
-                            <li><span class="sp" onclick="toMEDIAARTS()">Homemade braised fish</span></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class="submenu-general submenu-detail">
-                <span class="sp"><a href="./comment.html">COMMENT</a></span>
-            </li>
-        </ul>
-    </div>
-
-</nav>
+          </ul>
+        </div>
+    
+      </nav>
+    
 <div class="home-intro">
     <a href="#about" class="scroll-to scroll-to-arrow home-scroll-to close home-close">
         <span class="scroll-arrow"></span> <span class="scroll-line"></span> Scroll
@@ -272,7 +240,7 @@ Leah Liu</span>
                     Our manifesto
                 </div>
                 <div class="small-12 columns nopad manifesto-text">
-                    Making design valuable beyond the aesthetics.
+                  “Everyone needs a fantasy.” --Andy Warhol
                 </div>
             </div>
         </div>
@@ -311,112 +279,11 @@ Leah Liu</span>
 <script src="https://andstudio.lt/wp-content/themes/andstudio/js/main.js"></script>
 
 <script type="text/javascript" src="https://andstudio.lt/wp-includes/js/wp-embed.min.js?ver=5.3.3"></script>
-<script type="text/javascript">
 
-    var url = window.location.href;
-    var index = url.lastIndexOf("=");
-    var obj = url.substring(index+1,url.length);
-    // alert(obj);
-    if(obj === 'OlafurELiasson'){
-        var rootB = document.getElementsByClassName('b');
-        for (var i = 0;i<rootB.length;i++){
-            rootB[i].style.display = "none";
-        }
-        var rootC = document.getElementsByClassName('c');
-        for (var j = 0;j<rootC.length;j++){
-            rootC[j].style.display = "none";
-        }
-        var rootD = document.getElementsByClassName('d');
-        for (var k = 0;k<rootD.length;k++){
-            rootD[k].style.display = "none";
-        }
-        var rootE = document.getElementsByClassName('e');
-        for (var h = 0;h<rootE.length;h++){
-            rootE[h].style.display = "none";
-        }
-    }
-    if(obj === 'PaulKlee'){
-        var rootB = document.getElementsByClassName('a');
-        for (var i = 0;i<rootB.length;i++){
-            rootB[i].style.display = "none";
-        }
-        var rootC = document.getElementsByClassName('c');
-        for (var j = 0;j<rootC.length;j++){
-            rootC[j].style.display = "none";
-        }
-        var rootD = document.getElementsByClassName('d');
-        for (var k = 0;k<rootD.length;k++){
-            rootD[k].style.display = "none";
-        }
-        var rootE = document.getElementsByClassName('e');
-        for (var h = 0;h<rootE.length;h++){
-            rootE[h].style.display = "none";
-        }
-    }
-    if(obj === 'HenriMatisse'){
-        var rootB = document.getElementsByClassName('a');
-        for (var i = 0;i<rootB.length;i++){
-            rootB[i].style.display = "none";
-        }
-        var rootC = document.getElementsByClassName('b');
-        for (var j = 0;j<rootC.length;j++){
-            rootC[j].style.display = "none";
-        }
-        var rootD = document.getElementsByClassName('d');
-        for (var k = 0;k<rootD.length;k++){
-            rootD[k].style.display = "none";
-        }
-        var rootE = document.getElementsByClassName('e');
-        for (var h = 0;h<rootE.length;h++){
-            rootE[h].style.display = "none";
-        }
-    }
-    if(obj === 'AndyWarhol'){
-        var rootB = document.getElementsByClassName('a');
-        for (var i = 0;i<rootB.length;i++){
-            rootB[i].style.display = "none";
-        }
-        var rootC = document.getElementsByClassName('b');
-        for (var j = 0;j<rootC.length;j++){
-            rootC[j].style.display = "none";
-        }
-        var rootD = document.getElementsByClassName('c');
-        for (var k = 0;k<rootD.length;k++){
-            rootD[k].style.display = "none";
-        }
-        var rootE = document.getElementsByClassName('e');
-        for (var h = 0;h<rootE.length;h++){
-            rootE[h].style.display = "none";
-        }
-    }
-    if(obj === 'LukeEdwardHall'){
-        var rootB = document.getElementsByClassName('a');
-        for (var i = 0;i<rootB.length;i++){
-            rootB[i].style.display = "none";
-        }
-        var rootC = document.getElementsByClassName('b');
-        for (var j = 0;j<rootC.length;j++){
-            rootC[j].style.display = "none";
-        }
-        var rootD = document.getElementsByClassName('c');
-        for (var k = 0;k<rootD.length;k++){
-            rootD[k].style.display = "none";
-        }
-        var rootE = document.getElementsByClassName('d');
-        for (var h = 0;h<rootE.length;h++){
-            rootE[h].style.display = "none";
-        }
-    }
-    function toPath(item){
-        window.location.href='./inspiration.html' + '?code=' + item;
-    }
-    function toVISUALARTS() {
-        window.location.href='./visualArts.html';
-    }
-    function toMEDIAARTS() {
-        window.location.href='./mediaArts.html';
-    }
+<script>
+  function toPath(item){
+      window.location.href='./work.html' + '?code=' + item;
+  }
 </script>
-
 </body>
 </html>
